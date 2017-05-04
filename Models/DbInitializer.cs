@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using ConsoleApplication.Models.Entities;
 using Microsoft.Extensions.DependencyInjection;
 
 // 1. remove unnessary usings

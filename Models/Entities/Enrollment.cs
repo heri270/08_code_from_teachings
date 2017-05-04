@@ -1,4 +1,4 @@
-namespace ConsoleApplication.Models
+namespace ConsoleApplication.Models.Entities
 {
     public class Enrollment
     {

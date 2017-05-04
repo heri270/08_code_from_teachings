@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using ConsoleApplication.Models.Entities;
 
 namespace ConsoleApplication.Models.Repositories
 {

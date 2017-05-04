@@ -3,6 +3,7 @@ using System.Linq;
 using ConsoleApplication.Models;
 using ConsoleApplication.Models.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using ConsoleApplication.Models.Entities;
 
 namespace ConsoleApplication.Controllers
 {
@@ -46,7 +47,6 @@ namespace ConsoleApplication.Controllers
                 // db.Students.Add(st);
                 // db.SaveChanges();
                 return RedirectToAction("Index");
-
             }
             else
             {
@@ -99,5 +99,13 @@ namespace ConsoleApplication.Controllers
             return View(student);
         }
 
+        public IActionResult Course(int id)
+        {
+            StudentCourseViewModel scvm = new StudentCourseViewModel();
+            scvm.Student = studentRepository.Get(id);
+            scvm.Courses = courseRepository.GetAll();
+
+            return View(scvm);
+        }
     }
 }

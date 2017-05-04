@@ -10,6 +10,7 @@
         <p>@Model.Student.StudentID @Model.Student.FirstName @Model.Student.LastName</p>
     </div>
 </div>
+
 <form asp-controler="Student" asp-action="Course" method="POST" class="form-horizontal" >
     <input type="Hidden" name="StudentID" value="@Model.Student.StudentID">
     <div class="row">
@@ -27,13 +28,4 @@
             <a class="btn btn-primary" asp-controller="Student" asp-action="Index">Finish</a>
         </div>
     </div>
-    
- 
-            
-
-           
-        
-    
-    
-  </form>   
-           
+</form>   

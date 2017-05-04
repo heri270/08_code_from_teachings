@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace ConsoleApplication.Models 
+namespace ConsoleApplication.Models.Entities
 {
     public class Student
     {

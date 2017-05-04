@@ -1,3 +1,4 @@
+using ConsoleApplication.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace ConsoleApplication.Models 

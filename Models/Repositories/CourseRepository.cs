@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using ConsoleApplication.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace ConsoleApplication.Models.Repositories
