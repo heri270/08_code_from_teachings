@@ -4,6 +4,7 @@ using ConsoleApplication.Models;
 using ConsoleApplication.Models.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using ConsoleApplication.Models.Entities;
+using ConsoleApplication.Models.ViewModels;
 
 namespace ConsoleApplication.Controllers
 {
@@ -17,9 +18,10 @@ namespace ConsoleApplication.Controllers
 
         private ICourseRepository courseRepository;
 
-        public StudentController(IStudentRepository studentRepository)
+        public StudentController(IStudentRepository studentRepository, ICourseRepository courseRepository)
         {
             this.studentRepository = studentRepository;
+            this.courseRepository = courseRepository;
         }
 
         // Read

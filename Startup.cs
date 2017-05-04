@@ -8,7 +8,6 @@ namespace ConsoleApplication
 {
     public class Startup
     {
-
         public void ConfigureServices(IServiceCollection servises)
         {
             // 3. register you db context so it can be used, and run again --- thats it! 

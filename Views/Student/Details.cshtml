@@ -1,8 +1,7 @@
-@model ConsoleApplication.Models.Student
+@model ConsoleApplication.Models.Entities.Student
 
 @{ 
     ViewBag.Title = "Details for: " + @Model.FirstName + " " +  @Model.LastName; 
-    
 }
 
 <div class="row">
@@ -20,25 +19,25 @@
         <div class="row">
             <div class="col-md-4">
                 <h3>Title</h3>
-            
-    @foreach(var c in Model.Enrollments) {
-       <p> @c.Course.Title</p>
-    }
+
+                @foreach(var c in Model.Enrollments) {
+                <p> @c.Course.Title</p>
+                }
             </div>
 
             <div class="col-md-4">
                 <h3>Grade</h3>
 
-        @foreach(var c in Model.Enrollments) {
-            @if(c.Grade == 0)
-            {
-                <p> - </p>
-            } else {
-                <p> @c.Grade</p>
-            }
-    }
-    </div>
-    </div>
+                @foreach(var c in Model.Enrollments) {
+                    @if(c.Grade == 0)
+                    {
+                        <p> - </p>
+                    } else {
+                        <p> @c.Grade</p>
+                    }
+                }
+            </div>
+        </div>
     <a class="btn btn-primary" asp-controller="Student" asp-action="Course" asp-route-id=@Model.StudentID >Add Enrollments</a>
     <a class="btn btn-primary" asp-controller="Student" asp-action="Index" >Give Grade</a>
     </div>
