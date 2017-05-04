@@ -20,6 +20,7 @@ namespace ConsoleApplication
             //       dotnet run
             servises.AddMvc();
             servises.AddScoped<IStudentRepository, StudentRepository>();
+            servises.AddScoped<ICourseRepository, CourseRepository>();
            // servises.AddScoped<IStudentRepository, SimpleStudentRepository>();
         }
 

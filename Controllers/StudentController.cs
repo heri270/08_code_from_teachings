@@ -15,6 +15,8 @@ namespace ConsoleApplication.Controllers
        // Loosly Coupled
         private IStudentRepository studentRepository;
 
+        private ICourseRepository courseRepository;
+
         public StudentController(IStudentRepository studentRepository)
         {
             this.studentRepository = studentRepository;

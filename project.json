@@ -26,7 +26,8 @@
           "version": "1.0.0-preview2-final",
           "type": "build"
         }, 
-        "Microsoft.AspNetCore.StaticFiles": "1.1.0"
+        "Microsoft.AspNetCore.StaticFiles": "1.1.0",
+        "Microsoft.AspNetCore.Diagnostics": "1.1.1"
       },
       "imports": "dnxcore50"
     }

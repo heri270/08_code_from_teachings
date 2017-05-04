@@ -13,7 +13,6 @@ namespace ConsoleApplication.Models.Repositories
         {
             _db = db;
             _courses = db.Courses;
-
         }
 
         public void Delete(int id)
@@ -28,6 +27,7 @@ namespace ConsoleApplication.Models.Repositories
 
         public IEnumerable<Course> GetAll()
         {
+            IEnumerable<Course> courses = _db.Courses;
             return _courses;
         }
 
