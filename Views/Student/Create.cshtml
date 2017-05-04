@@ -1,56 +1,12 @@
-@model ConsoleApplication.Models.Student
+@model ConsoleApplication.Models.Student    
 
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Create Student</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  
-    </head>
-    <body class="container" style="margin-top: 40px">
+@{
+    ViewBag.Title = "Create New Student"; 
+    ViewBag.btnText = "Create";
+    ViewBag.btn2Text = "Go Back to List";
+}
 
-        <div class="jumbotron">
-            <h1>Create new student</h1>
-        </div>
-    
+<form asp-controler="Student" asp-action="Create" method="POST" class="form-horizontal">
 
-    <form asp-controler="Student" asp-action="Create" method="POST" class="form-horizontal" >
-        <div class="form-group">          
-                <label asp-for="FirstName" class="col-md-2 control-label"></label>
-                <div class="col-md-4">
-                <input class="form-control "  asp-for="FirstName">
-            </div>
-        </div>
-        
-          <div class="form-group">       
-                <label asp-for="LastName" class="col-md-2 control-label"></label>
-                <div class="col-md-4">
-                <input class="form-control " asp-for="LastName" >
-            </div>
-        </div>
-
-        <div class="form-group">       
-                <label asp-for="EnrollmenDate" class="col-md-2 control-label"></label>
-                <div class="col-md-4">
-                <input class="form-control " asp-for="EnrollmenDate" >
-            </div>
-        </div>
-
-        <div class="form-group">       
-                <label asp-for="Age " class="col-md-2 control-label"></label>
-                <div class="col-md-4">
-                <input class="form-control " asp-for="Age">
-            </div>
-        </div>
-      
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-4">
-            <button type="submit" class="btn btn-success">Update</button>
-        </div>
-    </form>
-    </body>
-</html>
-
-
+    @Html.Partial("_StudentsForm")
+</form>
